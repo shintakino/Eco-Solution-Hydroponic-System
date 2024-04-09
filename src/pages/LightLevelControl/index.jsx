@@ -101,7 +101,7 @@ export default function LightLevelControlPage() {
     // Fetch lux value when component mounts
     const fetchLuxValue = async () => {
       try {
-        const response = await fetch('http://192.168.100.15/testSend/get_latest_lux.php');
+        const response = await fetch('http://192.168.100.15/testSend/get_latest_lux_settings.php');
         if (response.ok) {
           const luxData = await response.json();
           // Extract lux value from response and set it in state
