@@ -42,7 +42,7 @@ export default function NutrientControlPage() {
     }
   
     // Send a POST request to save_PH_EC_settings.php
-    fetch('http://192.168.100.15/testSend/save_Ph_Ec_settings.php', {
+    fetch('http://192.168.1.108/testSend/save_Ph_Ec_settings.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

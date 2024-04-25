@@ -96,16 +96,17 @@ export default function LightLevelControlPage() {
   const formatedSeconds = convertFloatToSeconds(timeDuration);
   //Debug Console
   console.log('Data:',formattedTime);
-
+  
   useEffect(() => {
     // Fetch lux value when component mounts
     const fetchLuxValue = async () => {
       try {
-        const response = await fetch('http://192.168.100.15/testSend/get_latest_lux_settings.php');
+        const response = await fetch('http://192.168.1.108/testSend/get_latest_lux_settings.php');
         if (response.ok) {
           const luxData = await response.json();
+          console.log(luxData);
           // Extract lux value from response and set it in state
-          setLux(Number(luxData.light)); // Convert lux to number
+          setLux(Number(luxData.lux_settings)); // Convert lux to number
         } else {
           throw new Error('Failed to fetch lux value');
         }
@@ -143,7 +144,7 @@ export default function LightLevelControlPage() {
               // Send data to the PHP backend
               console.log('Lux to be sent:', getSpectrumValue(selectedSpectrum));
               console.log('Data to be sent:', requestData);
-              fetch('http://192.168.100.15/testSend/save_light_settings.php', {
+              fetch('http://192.168.1.108/testSend/save_light_settings.php', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',

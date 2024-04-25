@@ -29,7 +29,7 @@ export default function TempControlPage() {
     }
   
     // Send a POST request to save_temperature_settings.php
-    fetch('http://192.168.100.15/testSend/save_temperature_settings.php', {
+    fetch('http://192.168.1.108/testSend/save_temperature_settings.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

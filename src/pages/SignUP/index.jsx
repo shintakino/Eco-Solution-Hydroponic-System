@@ -76,7 +76,7 @@ export default function SignUPPage() {
   }
   
   function checkEmail(email) {
-    fetch('http://192.168.100.15/testSend/checkemail.php', {
+    fetch('http://192.168.1.108/testSend/checkemail.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -111,7 +111,7 @@ export default function SignUPPage() {
       // Adjust the URL to match the location of your PHP script
       checkEmail(email);
   
-      fetch('http://192.168.100.15/testSend/signup.php', {
+      fetch('http://192.168.1.108/testSend/signup.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
