@@ -69,7 +69,7 @@ namespace relays{
   int waterPump = 3;
   int solutionA = 4;
   int solutionB = 5;
-  int solutionUp = 6;
+  int solutionUp = 6; 
   int solutionDown = 7;
   int growLights = 8;
   int waterPumpMain = 10;
@@ -93,7 +93,7 @@ namespace relays{
 const char* ssid = "TV";     // Narvaza WiFi_ZH-Konek Shintakino
 const char* password = "ArvinLicatan22"; //@narvaza2023 itz_me_josh
 
-const char* host = "192.168.1.108";  // Destination server IP 192.168.100.15 192.168.254.116 192.168.1.108
+const char* host = "localhost";  // Destination server IP localhost localhost localhost
 const char* hostAPI = "worldtimeapi.org";
 const char* timezone = "Asia/Manila";
 const char* apiURL = "https://worldtimeapi.org/api/timezone/Asia/Manila";
@@ -483,7 +483,7 @@ void testRelay(){
 // Get All Data from the Database
 void getDatabaseData(){
   relays::currentTime = getTimeLocal();
-  double* relayData = getData("http://192.168.1.108/testSend/tempMin.php");
+  double* relayData = getData("http://localhost/testSend/tempMin.php");
   if(relayData != NULL){
     relays::temp_min = relayData[0];
     relays::temp_max = relayData[1];

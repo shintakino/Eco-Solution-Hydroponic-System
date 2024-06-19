@@ -31,28 +31,37 @@ export default function WorkPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="aspect-w-16 aspect-h-9">
                   <Img
-                    src="images/img_full_thing_jpeg.png"
+                    src="images/Dashboard 1.1.jpg"
                     alt="fullthingjpeg"
                     className="object-cover rounded"
                   />
                 </div>
+
                 <div className="aspect-w-16 aspect-h-9">
                   <Img
-                    src="images/img_grow_box_jpeg.png"
+                    src="images/Dashboard 1.2.jpg"
+                    alt="fullthingjpeg"
+                    className="object-cover rounded"
+                  />
+                </div>
+
+                <div className="aspect-w-16 aspect-h-9">
+                  <Img
+                    src="images/Image 1.jpg"
                     alt="growboxjpeg_one"
                     className="object-cover rounded"
                   />
                 </div>
                 <div className="aspect-w-16 aspect-h-9">
                   <Img
-                    src="images/img_arduino_jpeg.png"
+                    src="images/Image 5.jpg"
                     alt="arduinojpeg_one"
                     className="object-cover rounded"
                   />
                 </div>
                 <div className="aspect-w-16 aspect-h-9">
                   <Img
-                    src="images/img_breadboard_jpeg.png"
+                    src="images/Image 6.jpg"
                     alt="breadboardjpeg"
                     className="object-cover rounded"
                   />

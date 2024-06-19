@@ -26,46 +26,46 @@ const ProjectRoutes = () => {
   let element = useRoutes([
     { path: "/", element: <Main />, },
     { path: "*", element: <NotFound /> },
-    // {
-    //   path: "desktopmaindashboard",
-    //   element: isAuthenticated() ? <DESKTOPMAINDASHBOARD /> : <Navigate to="/" />, // Redirect to login if not logged in
-    // },
-    // {
-    //   path: "tempcontrol",
-    //   element: isAuthenticated() ? <TempControl /> : <Navigate to="/" />, // Redirect to login if not logged in
-    // },
-    // {
-    //   path: "lightlevelcontrol",
-    //   element: isAuthenticated() ? <LightLevelControl /> : <Navigate to="/" />, // Redirect to login if not logged in
-    // },
-    // {
-    //   path: "nutrientcontrol",
-    //   element: isAuthenticated() ? <NutrientControl /> : <Navigate to="/" />, // Redirect to login if not logged in
-    // },
-    // {
-    //   path: "sensordatagraph",
-    //   element: isAuthenticated() ? <SensorDataGraph /> : <Navigate to="/" />, // Redirect to login if not logged in
-    // },
     {
       path: "desktopmaindashboard",
-      element: <DESKTOPMAINDASHBOARD />, // Redirect to login if not logged in
+      element: isAuthenticated() ? <DESKTOPMAINDASHBOARD /> : <Navigate to="/" />, // Redirect to login if not logged in
     },
     {
       path: "tempcontrol",
-      element:  <TempControl />, // Redirect to login if not logged in
+      element: isAuthenticated() ? <TempControl /> : <Navigate to="/" />, // Redirect to login if not logged in
     },
     {
       path: "lightlevelcontrol",
-      element:  <LightLevelControl />, // Redirect to login if not logged in
+      element: isAuthenticated() ? <LightLevelControl /> : <Navigate to="/" />, // Redirect to login if not logged in
     },
     {
       path: "nutrientcontrol",
-      element: <NutrientControl /> , // Redirect to login if not logged in
+      element: isAuthenticated() ? <NutrientControl /> : <Navigate to="/" />, // Redirect to login if not logged in
     },
     {
       path: "sensordatagraph",
-      element: <SensorDataGraph />, // Redirect to login if not logged in
+      element: isAuthenticated() ? <SensorDataGraph /> : <Navigate to="/" />, // Redirect to login if not logged in
     },
+    // {
+    //   path: "desktopmaindashboard",
+    //   element: <DESKTOPMAINDASHBOARD />, // Redirect to login if not logged in
+    // },
+    // {
+    //   path: "tempcontrol",
+    //   element:  <TempControl />, // Redirect to login if not logged in
+    // },
+    // {
+    //   path: "lightlevelcontrol",
+    //   element:  <LightLevelControl />, // Redirect to login if not logged in
+    // },
+    // {
+    //   path: "nutrientcontrol",
+    //   element: <NutrientControl /> , // Redirect to login if not logged in
+    // },
+    // {
+    //   path: "sensordatagraph",
+    //   element: <SensorDataGraph />, // Redirect to login if not logged in
+    // },
     {
       path: "home",
       element: <Home />,

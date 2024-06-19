@@ -10,33 +10,33 @@ export default function TempControlPage() {
 
   const handleApplySettings = () => {
     setErrorMessage('');
-    const minTemperatureInput = document.getElementsByName('minTemp')[0];
-    const maxTemperatureInput = document.getElementsByName('maxTemp')[0];
+    const min_VpdInput = document.getElementsByName('minTemp')[0];
+    const max_VpdInput = document.getElementsByName('maxTemp')[0];
   
     // Check if any of the input fields are empty
-    if (!minTemperatureInput.value.trim() || !maxTemperatureInput.value.trim()) {
+    if (!min_VpdInput.value.trim() || !max_VpdInput.value.trim()) {
       setErrorMessage('Please fill in all the fields.');
       return;
     }
   
-    const minTemperature = parseFloat(minTemperatureInput.value);
-    const maxTemperature = parseFloat(maxTemperatureInput.value);
+    const min_vpd = parseFloat(min_VpdInput.value);
+    const max_vpd = parseFloat(max_VpdInput.value);
   
-    // Check if max temperature is greater than min temperature
-    if (maxTemperature <= minTemperature) {
-      setErrorMessage('Max temperature must be greater than Min temperature.');
+    // Check if max vpd is greater than min vpd
+    if (max_vpd <= min_vpd) {
+      setErrorMessage('Max vpd must be greater than Min vpd.');
       return;
     }
   
     // Send a POST request to save_temperature_settings.php
-    fetch('http://192.168.1.108/testSend/save_temperature_settings.php', {
+    fetch('http://localhost/testSend/save_temperature_settings.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: new URLSearchParams({
-        min: minTemperature,
-        max: maxTemperature,
+        min: min_vpd,
+        max: max_vpd,
       }),
     })
       .then(response => {
@@ -79,7 +79,7 @@ export default function TempControlPage() {
   return (
     <>
       <Helmet>
-        <title>Temperature Control</title>
+        <title>VPD Control</title>
         <meta name="description" content="Web site created using create-react-app" />
       </Helmet>
       <div className="flex flex-col items-center justify-center w-full px-4 py-8 bg-gray-900">
@@ -93,12 +93,12 @@ export default function TempControlPage() {
             <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-16">
               <div className="flex flex-col items-center justify-center max-w-md">
                 <Heading size="2xl" as="h2" className="text-green-400 mb-6 text-center">
-                  Temperature Control
+                  VPD Control
                 </Heading>
                 <div className="flex flex-col items-center gap-6 w-full">
                   <div className="flex flex-col items-center w-full gap-4">
                     <Heading size="lg" as="h3" className="text-gray-100 text-center">
-                      Temperature Range
+                      VPD Range
                     </Heading>
                     <div className="flex justify-center gap-4 w-full">
                       <Input

@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = (email, password) => {
-    return fetch('http://192.168.1.108/testSend/login.php', {
+    return fetch('http://localhost/testSend/login.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const checkEmailStatus = (email) => {
-    return fetch('http://192.168.1.108/testSend/checkemailstatus.php', {
+    return fetch('http://localhost/testSend/checkemailstatus.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

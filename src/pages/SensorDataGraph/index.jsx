@@ -13,7 +13,7 @@ const SensorDataGraph = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://192.168.1.108/testSend/TemperatureGraph.php');
+            const response = await fetch('http://localhost/testSend/TemperatureGraph.php');
             const jsonData = await response.json();
             setData(jsonData);
         } catch (error) {

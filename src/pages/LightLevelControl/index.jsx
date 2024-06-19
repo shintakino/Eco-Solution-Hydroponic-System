@@ -101,7 +101,7 @@ export default function LightLevelControlPage() {
     // Fetch lux value when component mounts
     const fetchLuxValue = async () => {
       try {
-        const response = await fetch('http://192.168.1.108/testSend/get_latest_lux_settings.php');
+        const response = await fetch('http://localhost/testSend/get_latest_lux_settings.php');
         if (response.ok) {
           const luxData = await response.json();
           console.log(luxData);
@@ -144,7 +144,7 @@ export default function LightLevelControlPage() {
               // Send data to the PHP backend
               console.log('Lux to be sent:', getSpectrumValue(selectedSpectrum));
               console.log('Data to be sent:', requestData);
-              fetch('http://192.168.1.108/testSend/save_light_settings.php', {
+              fetch('http://localhost/testSend/save_light_settings.php', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
