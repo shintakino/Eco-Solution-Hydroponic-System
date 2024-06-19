@@ -1,4 +1,5 @@
 # Eco-Solution-Hydroponic-System
+![Project Image](public/images/Image%204.jpg) 
 Hydroponics Local Based Automation using React Framework and Arduino Nano Esp32 SQL
 Sensors: Sensors (temperature, humidity, pH, tsl2561 light sensor, fans, relays, ec sensor, light, dosing pumps) monitor the hydroponics environment.
 Arduino Nano/ESP32: The Arduino board collects sensor data and controls actuators (water pumps, lights, dosing pumps)
