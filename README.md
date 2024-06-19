@@ -35,7 +35,7 @@ This project implements a local automation system for a hydroponics setup using 
    - Clone or download this project repository.
    - Install dependencies:
      ```bash
-     cd frontend (or your React project directory)
+     cd Eco-Solution-Hydroponic-System
      npm install
      ```
    - (Using PHP backend) Configure XAMPP and create a database copy all the scripts to your xamp directory.
@@ -48,7 +48,7 @@ This project implements a local automation system for a hydroponics setup using 
 1. **Frontend:**
    - Start the React development server:
      ```bash
-     cd frontend
+     cd Eco-Solution-Hydroponic-System
      npm start
      ```
    - Open http://localhost:3000 (or the port specified in `package.json`) in your browser.
